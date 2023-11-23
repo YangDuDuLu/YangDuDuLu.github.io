@@ -57,3 +57,14 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container img {
+width: 600px; /* Adjust the width as needed */
+height: auto;
+}
