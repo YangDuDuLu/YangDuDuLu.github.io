@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yang Lu - CV</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Add custom CSS styles here */
+    .navbar-nav {
+      width: 100%;
+      justify-content: space-evenly;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+      color: white;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: lightgray;
+    }
+    .header {
+      background-image: url("1.jpeg");
+      background-size: cover;
+      background-position: center;
+      height: 65px; /* Adjust the height as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .header h1 {
+      text-align: center;
+      font-weight: bold;
+      color: #F8F8FF;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <h1>Yang Lu</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publication">Publication</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="about" class="content-section active">
+      <h2><b>About</b></h2>
+      <p>I am always curious about the universe and the future of humanity. Alongside my work in Artificial Intelligence, I often find myself contemplating the potential paths that lie ahead for mankind. In addition to my passion for AI, I am particularly intrigued by the intersection of AI and Economics, and how advancements in AI will revolutionize the field.</p>
+    </section>
+
+    <section id="experience" class="content-section">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <h3>Job Title</h3>
+          <p>Company Name</p>
+          <p>Date Range</p>
+          <ul>
+            <li>Responsibility 1</li>
+            <li>Responsibility 2</li>
+            <li>Responsibility 3</li>
+          </ul>
+        </li>
+        <!-- Add more experience items as needed -->
+      </ul>
+    </section>
+
+    <section id="education" class="content-section">
+      <h2 style="font-size: 24px; font-weight: bold; color: #F8F8FF; margin-bottom: 50px;">Education</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 30px;">
+          <h3 style="font-size: 18px; font-weight: bold; color: whitesmoke;">Master of Arts: Applied Leadership and Management</h3>
+          <p style="font-size: 16px; color: whitesmoke;">Arizona State University</p>
+          <p style="font-size: 16px; color: whitesmoke;">March 2021 - October 2023</p>
+        </li>
+        <li style="margin-bottom: 30px;">
+          <h3 style="font-size: 18px; font-weight: bold; color: whitesmoke;">Master of Science: Computational Science and Engineering</h3>
+          <p style="font-size: 16px; color: whitesmoke;">North Carolina A&T State University</p>
+          <p style="font-size: 16px; color: whitesmoke;">August 2013 - May 2015</p>
+        </li>
+        <li style="margin-bottom: 30px;">
+          <h3 style="font-size: 18px; font-weight: bold; color: whitesmoke;">Bachelor of Arts: Mathematics</h3>
+          <p style="font-size: 16px; color: whitesmoke;">University of North Carolina</p>
+          <p style="font-size: 16px; color: whitesmoke;">August 2009 - August 2013</p>
+        </li>
+        <!-- Add more education items as needed -->
+      </ul>
+    </section>
+
+    <section id="publication" class="content-section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Skill 1</li>
+        <li>Skill 2</li>
+        <li>Skill 3</li>
+        <!-- Add more skills as needed -->
+      </ul>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>Email: yourname@example.com</p>
+      <p>Phone: 123-456-7890</p>
+      <p>Website: yourwebsite.com</p>
+    </section>
+  </main>
+  <audio src="between.mp3" controls loop></audio>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    // Add event listeners to the navigation links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const contentSections = document.querySelectorAll('.content-section');
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Remove the 'active' class from all content sections
+        contentSections.forEach((section) => {
+          section.classList.remove('active');
+        });
+
+        // Add the 'active' class to the clicked content section
+        const targetSectionId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetSectionId);
+        targetSection.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
